@@ -6,9 +6,31 @@ on:
       profile:
         description: |
           输入 软路由型号（用逗号分隔的多个值），可选值如下：
-          ariaboard_photonicat,armsom_sige3,ezpro_mrkaio-m68s,firefly_roc-rk3328-cc,firefly_roc-rk3568-pc,friendlyarm_nanopc-t4,friendlyarm_nanopi-r2c,friendlyarm_nanopi-r2c-plus,friendlyarm_nanopi-r2s,friendlyarm_nanopi-r4s,friendlyarm_nanopi-r4s-enterprise,friendlyarm_nanopi-r4se,friendlyarm_nanopi-r5c,friendlyarm_nanopi-r5s,huake_guangmiao-g4c,lunzn_fastrhino-r66s,lunzn_fastrhino-r68s,lyt_t68m,pine64_rockpro64,radxa_rock-pi-4a,radxa_rock-pi-e,xunlong_orangepi-r1-plus,xunlong_orangepi-r1-plus-lts
+          ariaboard_photonicat
+          ,armsom_sige3
+          ,ezpro_mrkaio-m68s
+          ,firefly_roc-rk3328-cc
+          ,firefly_roc-rk3568-pc
+          ,friendlyarm_nanopc-t4
+          ,friendlyarm_nanopi-r2c
+          ,friendlyarm_nanopi-r2c-plus
+          ,friendlyarm_nanopi-r2s
+          ,friendlyarm_nanopi-r4s
+          ,friendlyarm_nanopi-r4s-enterprise
+          ,friendlyarm_nanopi-r4se
+          ,friendlyarm_nanopi-r5c
+          ,friendlyarm_nanopi-r5s
+          ,huake_guangmiao-g4c
+          ,lunzn_fastrhino-r66s
+          ,lunzn_fastrhino-r68s
+          ,lyt_t68m
+          ,pine64_rockpro64
+          ,radxa_rock-pi-4a
+          ,radxa_rock-pi-e
+          ,xunlong_orangepi-r1-plus
+          ,xunlong_orangepi-r1-plus-lts
         required: true
-        default: 'friendlyarm_nanopi-r4s'
+        default: 'friendlyarm_nanopi-r5c'
       rootfs_partsize:
         description: '设置软件包大小 单位(MB)'
         required: true
