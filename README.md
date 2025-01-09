@@ -19,9 +19,5 @@ https://mirrors.sjtug.sjtu.edu.cn/immortalwrt/releases/23.05.4/packages/x86_64/l
 - 综合上述特点，单网口应该先接路由器，先在路由器查看一下它的ip 再访问。
 - 上述特点 你都可以通过 `99-custom.sh` 配置和调整
 
-## ❤️其它GitHub Action项目推荐🌟 （建议收藏）⬇️
-https://github.com/wukongdaily/RunFilesBuilder<br>
-https://github.com/wukongdaily/DockerTarBuilder
-
 # 🌟鸣谢
 ### https://github.com/immortalwrt
