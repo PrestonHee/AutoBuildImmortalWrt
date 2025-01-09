@@ -8,8 +8,7 @@ uci add dhcp domain
 uci set "dhcp.@domain[-1].name=time.android.com"
 uci set "dhcp.@domain[-1].ip=203.107.6.88"
 
-
-# 根据网卡数量配置网络
+# 计算网卡数量
 count=0
 for iface in /sys/class/net/*; do
   iface_name=$(basename "$iface")
@@ -21,10 +20,25 @@ done
 
 # 网络设置
 if [ "$count" -eq 1 ]; then
-  uci set network.lan.proto='dhcp'
+   # 单网口设备 NAS模式
+   uci set network.lan.proto='dhcp'
 elif [ "$count" -gt 1 ]; then
-  uci set network.lan.ipaddr='192.168.8.1'
-fi
+   # 多网口设备
+   uci set network.lan.ipaddr='192.168.8.1'
+   # 判断是否启用 PPPoE
+   if [[ "$ENABLE_PPPOE" == "yes" ]]; then
+      echo "PPPoE is enabled."
+      # 设置拨号信息
+      uci set network.wan.proto='pppoe'                
+      uci set network.wan.username=$PPPOE_ACCOUNT     
+      uci set network.wan.password=$PPPOE_PASSWORD     
+      uci set network.wan.peerdns='1'                  
+      uci set network.wan.auto='1' 
+      echo "PPPoE configuration completed successfully."
+    else
+      echo "PPPoE is not enabled. Skipping configuration."
+    fi
+ fi
 
 # 设置所有网口可访问网页终端
 uci delete ttyd.@ttyd[0].interface
