@@ -37,6 +37,7 @@ PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES fdisk"
+PACKAGES="$PACKAGES cfdisk"
 PACKAGES="$PACKAGES script-utils"
 
 # 判断是否需要编译 Docker 插件
