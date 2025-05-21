@@ -26,11 +26,11 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - Starting build process..."
 
 # 定义所需安装的包列表 下列插件你都可以自行删减
 PACKAGES=""
+PACKAGES="$PACKAGES bash"
 PACKAGES="$PACKAGES curl"
 PACKAGES="$PACKAGES vim-full"
 PACKAGES="$PACKAGES vim-runtime"
 PACKAGES="$PACKAGES iperf3-ssl"
-PACKAGES="$PACKAGES bash"
 PACKAGES="$PACKAGES drill"
 PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES cfdisk"
@@ -44,8 +44,8 @@ PACKAGES="$PACKAGES luci-i18n-filebrowser-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
+
 PACKAGES="$PACKAGES script-utils"
-# PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
