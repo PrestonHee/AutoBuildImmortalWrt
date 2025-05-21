@@ -32,20 +32,20 @@ PACKAGES="$PACKAGES vim-full"
 PACKAGES="$PACKAGES vim-runtime"
 PACKAGES="$PACKAGES iperf3-ssl"
 PACKAGES="$PACKAGES drill"
-PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES cfdisk"
 PACKAGES="$PACKAGES htop"
+PACKAGES="$PACKAGES luci-app-sqm-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-filebrowser-zh-cn"
-#24.10
+# PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn"
+# 24.10
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
 
-PACKAGES="$PACKAGES script-utils"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
