@@ -1,13 +1,13 @@
 # AutoBuildImmortalWrt
 [![GitHub](https://img.shields.io/github/license/wukongdaily/AutoBuildImmortalWrt.svg?label=LICENSE&logo=github&logoColor=%20)](https://github.com/wukongdaily/AutoBuildImmortalWrt/blob/master/LICENSE)
 
-## 🤔 这是什么？
-它是一个工作流。可快速构建 带docker且支持自定义固件大小的 immortalWrt
+# 🤔 这是什么？
+这是一个工作流。可以快速构建带docker且支持自定义固件大小的 immortalWrt
 > - 支持自定义固件大小，默认1GB <br>
 > - 支持预安装docker（可选）<br>
 > - 支持 x86-64 和 rockchip 两个平台（后续会增加）<br>
 > - 新增用户预设置 pppoe 拨号功能<br>
-
+---
 
 
 ## 旁路由的用户必读
@@ -31,6 +31,6 @@
 - 上述特点 你都可以通过 `99-custom.sh` 配置和调整
 
 
-# 🌟鸣谢
+## 🌟鸣谢
 ### https://github.com/immortalwrt
 
