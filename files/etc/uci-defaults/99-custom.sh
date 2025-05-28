@@ -1,8 +1,10 @@
 #!/bin/sh
 # 99-custom.sh 就是immortalwrt固件首次启动时运行的脚本 位于固件内的/etc/uci-defaults/99-custom.sh
 # Log file for debugging
+
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
+
 # 设置默认防火墙规则，方便虚拟机首次访问 WebUI
 uci set firewall.@zone[1].input='ACCEPT'
 
@@ -91,6 +93,8 @@ elif [ "$count" -gt 1 ]; then
    fi
 fi
 
+# 设置 zram 默认压缩算法为 lz4
+uci set system.cfg01e48a.zram_comp_algo='lz4'
 
 # 设置所有网口可访问网页终端
 # uci delete ttyd.@ttyd[0].interface
