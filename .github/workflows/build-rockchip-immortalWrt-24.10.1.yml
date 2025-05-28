@@ -134,6 +134,15 @@ jobs:
             sha256sum -c "$file.sha256"
           done
 
+      - name: Create info
+        run: |
+          if [ "${{ github.event.inputs.include_docker }}" == "yes" ]; then
+            extra_content="#### 带docker"
+            echo -e "\n $extra_content" >> ${{ github.workspace }}/info.md
+          else
+            echo -e "NO docker"
+          fi
+
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
