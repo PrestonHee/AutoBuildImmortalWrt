@@ -86,7 +86,7 @@ jobs:
       - name: Create info
         run: |
           if [ "${{ github.event.inputs.include_docker }}" == "yes" ]; then
-            extra_content="#### 默认带docker"
+            extra_content="#### 带docker"
             echo -e "\n $extra_content" >> ${{ github.workspace }}/info.md
           else
             echo -e "NO docker"
