@@ -93,6 +93,29 @@ elif [ "$count" -gt 1 ]; then
    fi
 fi
 
+# 添加docker zone
+uci add firewall zone
+uci set firewall.@zone[-1].name='docker'
+uci set firewall.@zone[-1].input='ACCEPT'
+uci set firewall.@zone[-1].output='ACCEPT'
+uci set firewall.@zone[-1].forward='ACCEPT'
+uci set firewall.@zone[-1].device='docker0'
+
+# 添加 forwarding docker -> lan
+uci add firewall forwarding
+uci set firewall.@forwarding[-1].src='docker'
+uci set firewall.@forwarding[-1].dest='lan'
+
+# 添加 forwarding docker -> wan
+uci add firewall forwarding
+uci set firewall.@forwarding[-1].src='docker'
+uci set firewall.@forwarding[-1].dest='wan'
+
+# 添加 forwarding lan -> docker
+uci add firewall forwarding
+uci set firewall.@forwarding[-1].src='lan'
+uci set firewall.@forwarding[-1].dest='docker'
+
 # 设置 zram 默认压缩算法为 lz4
 uci set system.cfg01e48a.zram_comp_algo='lz4'
 
