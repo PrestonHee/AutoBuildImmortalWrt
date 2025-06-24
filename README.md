@@ -28,7 +28,4 @@
 
 ## 🌟鸣谢
 ### https://github.com/immortalwrt
-=======
-# 🌟鸣谢
-### https://github.com/immortalwrt
 
